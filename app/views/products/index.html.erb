@@ -1,6 +1,6 @@
 <% @products.each do |p| %>
   <%= p.name %>: <div id="body-<%= p.id %>"><%= truncate p.description %></div>
-  <div id="inventory"></div>
+  <div id="inventory-<%= p.id %>-status"></div>
   <button class="more-info" data-id="<%= p.id %>">More Info</button>
 <% end %>
 
@@ -11,8 +11,9 @@ $(function () {
     $.get("/products/" + id + "/description", function(data) {
       $("#body-" + id).text(data);
     });
-    $.get("/products/" + id + "/inventory");
-    debugger;
+    $.get("/products/" + id + "/inventory", function(data) {
+      $("#inventory-" + id + "-status").text(data);
+    });
   });
 });
 </script>
