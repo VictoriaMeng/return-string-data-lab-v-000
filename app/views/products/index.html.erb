@@ -13,7 +13,6 @@ $(function () {
     });
     $.get("/products/" + id + "/inventory", function(data) {
       debugger;
-      $("#inventory-" + id + "-status").text(data);
     });
   });
 });
