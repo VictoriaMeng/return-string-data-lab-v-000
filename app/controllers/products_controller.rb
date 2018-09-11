@@ -15,8 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    find
-    @product.inventory > 0 ? "true" : "false"
+    find.inventory > 0 ? "true" : "false"
   end
 
   private
