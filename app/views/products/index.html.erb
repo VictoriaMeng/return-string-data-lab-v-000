@@ -7,7 +7,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".more-info").on('click', function() {
-    var id = $(this).data("id");
+    const id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
       $("#body-" + id).text(data);
     });
