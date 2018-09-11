@@ -15,9 +15,9 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    if find.inventory > 0 
+    if find.inventory > 0
       render plain: "true"
-    else 
+    else
       render plain: "false"
     end
   end
