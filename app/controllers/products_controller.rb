@@ -14,6 +14,9 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def inventory
+  end
+
   private
 
   def product_params
