@@ -12,6 +12,7 @@ $(function () {
       $("#body-" + id).text(data);
     });
     $.get("/products/" + id + "/inventory", function(data) {
+      const message = data == "true" ? "Available" : "Sold Out"
       $("#inventory-" + id + "-status").text(data);
     });
   });
