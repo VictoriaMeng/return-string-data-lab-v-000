@@ -15,12 +15,13 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    
+    find
+    @product.inventory > 0 ? "true" : "false"
   end
 
   private
 
-  def find 
+  def find
     @product = Product.find(params[:id])
   end
 
