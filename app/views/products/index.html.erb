@@ -12,6 +12,7 @@ $(function () {
       $("#body-" + id).text(data);
     });
     $.get("/products/" + id + "/inventory", function(data) {
+      debuggerl
       $("#inventory-" + id + "-status").text(data);
     });
   });
