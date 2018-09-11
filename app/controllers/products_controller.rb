@@ -15,8 +15,11 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    find
-    render plain: @product.inventory > 0 ? "true" : "false"
+    if find.inventory > 0 
+      render plain: "true"
+    else 
+      render plain: "false"
+    end
   end
 
   def description
