@@ -15,9 +15,14 @@ class ProductsController < ApplicationController
   end
 
   def inventory
+    
   end
 
   private
+
+  def find 
+    @product = Product.find(params[:id])
+  end
 
   def product_params
     params.require(:product).permit(:name, :price, :description, :inventory_count)
