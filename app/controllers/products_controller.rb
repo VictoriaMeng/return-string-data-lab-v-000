@@ -15,7 +15,6 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    binding.pry
     if find.inventory > 0
       render plain: "true"
     else
